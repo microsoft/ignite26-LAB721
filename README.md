@@ -32,8 +32,7 @@ Fill in the sections below yourself, then:
 
 # [Microsoft Ignite 2026](https://ignite.microsoft.com)
 
-## 🔥BRKXXX: SESSION TITLE
-
+## 🔥LAB721: Hands-on with the resiliency in Azure: Assess, recommend, recover
 ### Session description
 
 Add your session description here. Keep it concise — 2-3 sentences about what attendees will learn and why it matters.
