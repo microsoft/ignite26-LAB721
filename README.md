@@ -35,7 +35,7 @@ Fill in the sections below yourself, then:
 ## 🔥LAB721: Hands-on with the resiliency in Azure: Assess, recommend, recover
 ### Session description
 
-Add your session description here. Keep it concise — 2-3 sentences about what attendees will learn and why it matters.
+In this hands-on lab, experience Azure resiliency across availability, disaster recovery, data resiliency, and cyber recovery. Define resiliency goals for a sample workload, assess readiness against zonal and regional failures, identify gaps against RTO/RPO targets, and apply guided recommendations to improve resiliency. Perform clean-room recovery to restore trusted data after an attack and leave with a practical, repeatable approach using Azure resiliency capabilities and AI-assisted guidance.
 
 ### 🚀 Getting started
 
