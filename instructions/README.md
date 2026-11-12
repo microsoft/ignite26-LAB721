@@ -43,8 +43,7 @@ By the end of this lab, Caldova will:
     - You can also open the agent from the top actions on the **Resiliency** overview page.
 3. Review the CaldovaPayApp architecture below. A copy, **CaldovaPayApp Architecture**, is also available in the D drive. You can locate it using Windows Explorer. 
 
-[!IMAGE[CaldovaPayAppArchitectureV2.png](instructions360163/CaldovaPayAppArchitectureV2.png)](https://github.com/microsoft/ignite26-LAB721/blob/main/docs/CaldovaPayAppArchitectureV2Download.png)
-
+<img src="[[https://github.com/Charmila1.png](https://github.com/microsoft/ignite26-LAB721/blob/main/docs/CaldovaPayAppArchitectureV2Download.png)](https://github.com/microsoft/ignite26-LAB721/blob/main/docs/CaldovaPayAppArchitectureV2Download.png)" width="100px;" alt="CaldovaPayAppArchitectureV2Download"/>
 
 4. Copy the prompt below into the agent chat and send it:
 
