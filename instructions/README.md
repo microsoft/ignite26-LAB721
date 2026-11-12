@@ -43,7 +43,7 @@ By the end of this lab, Caldova will:
     - You can also open the agent from the top actions on the **Resiliency** overview page.
 3. Review the CaldovaPayApp architecture below. A copy, **CaldovaPayApp Architecture**, is also available in the D drive. You can locate it using Windows Explorer. 
 
-!IMAGE[CaldovaPayAppArchitectureV2.png](instructions360163/CaldovaPayAppArchitectureV2.png)
+[!IMAGE[CaldovaPayAppArchitectureV2.png](instructions360163/CaldovaPayAppArchitectureV2.png)](https://github.com/microsoft/ignite26-LAB721/blob/main/docs/CaldovaPayAppArchitectureV2Download.png)
 
 
 4. Copy the prompt below into the agent chat and send it:
@@ -511,8 +511,8 @@ In Exercise 1, you reviewed the resiliency posture of Caldova's entire Azure est
 5. Review the resources discovered, the recommended application boundaries within the specified subscription and resource group.
 6. Confirm that the discovered resources represent the application in the image below:
 
+[caldovapayapp-architecture-single-vm.png](https://github.com/microsoft/ignite26-LAB721/blob/main/docs/caldovapayapp-architecture-single-vm.png)
 
-!IMAGE[caldovapayapp-architecture-single-vm.png](instructions360163/caldovapayapp-architecture-single-vm.png)
 
 > [!hint] Note that the application here has only one VM, persisting in a single zone, and a Standard PG SQL server. 
 
