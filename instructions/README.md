@@ -3,7 +3,7 @@
 
 ## Welcome to Your Lab Environment - End to end Resiliency
 
-To begin, log into the virtual machine using the following credentials: +++@lab.VirtualMachine(Win11-Pro-Base).Password+++ (only applicable for in person lab attendees)
+For in-person lab attendees, sign in to the provided Windows 11 virtual machine using the username and password supplied by your lab provider. If you are following these instructions outside the hosted lab, use your own workstation; no lab virtual machine sign-in is required.
 
 # Hands-on with Resiliency in Azure: Assess, Recommend, Recover
 
@@ -30,14 +30,14 @@ By the end of this lab, Caldova will:
 
 
 > [!TIP]
-> Credentials for logging into the system and into Azure are on the **Resources** tab beside the **Instructions** tab that you are currently on.
+> In the hosted lab, find your virtual machine credentials, Azure sign-in credentials and assigned subscription on the **Resources** tab beside **Instructions**. Outside the hosted lab, use your own Azure account and the subscription containing the exercise resources. To find its subscription ID, open **Subscriptions** in the Azure portal, select that subscription and copy **Subscription ID** from **Overview**.
 
 
 ===
 
 ### 🛠️ Task 1: Generate a Resilient IaC Template with the Resiliency Agent
 
-1. Sign in to the [https://aka.ms/AzureResiliency/regionalpreview](https://aka.ms/AzureResiliency/regionalpreview) using the credentials on the **Resources** tab.
+1. Sign in to the [https://aka.ms/AzureResiliency/regionalpreview](https://aka.ms/AzureResiliency/regionalpreview) using your assigned lab Azure credentials, or your own Azure account outside the hosted lab.
     1. Use the Azure portal from the above link for the entire duration of the lab as we are going to present to you some of the features that are still in preview that are available with the above link
 2. Open **Azure Copilot** from the top bar of the portal and select **Resiliency** from the **New chat** options.
     - You can also open the agent from the top actions on the **Resiliency** overview page.
@@ -75,7 +75,7 @@ Generate a Bicep template that keeps this application running through an availab
     - **Region:** use the region as **"EastUS"**
     - For anything else, accept the agent's recommendation.
     - Select 'Generate Bicep' when suggested by the agent
-    - If asked for subscription, check the **Resources** tab and use that. 
+    - If asked for a subscription, use the assigned subscription on the **Resources** tab in the hosted lab, or the subscription containing your exercise resources outside the hosted lab.
 
     <!-- TODO (engineering): add the lab region capacity to the Skillable Resources tab. 
   Also to align with the narrative of  a new deployment, lets see if we should select a non US region where Caldova will venture.-->
@@ -217,8 +217,6 @@ In this task you create a **Backup vault**.
 2. In the left navigation, expand **Backup and recovery** and select **Vaults**.
 3. Select **+ Vault**.
 
-!IMAGE[02-vaults-list.png](instructions360163/02-vaults-list.png)
-
 4. For vault type, choose **Backup vault**, then select **Continue**.
 5. On the **Basics** tab, enter:
    - **Subscription**: your lab subscription
@@ -257,11 +255,9 @@ Azure Backup keeps a copy of Caldova's transaction archive in the vault, separat
 **Create the backup policy**
 
 1. In the portal, open the Backup vault with **backupvault-unprotected-&lt;unique-suffix&gt;-1** (for example - backupvault-unprotected-66282771-1) and navigate to **Manage** -> **Backup policies**, then **+ Add**.
-!IMAGE[b83dpnds.png](instructions360163/b83dpnds.png)
 2. On the **Basics** tab, enter the **Policy name** `CaldovaPay-ADLS-Policy` and select **Datasource type** as **Azure Data Lake Storage**.
 3. On the **Schedule + retention** tab, review the Backup Frequency and Retention settings for the default rule.
 4. Click on Add retention rule -> Select Retention rule **Backup taken every month**, select **Vault-Standard** and click on **Add** and click on Next
-!IMAGE[l5hnbsoq.png](instructions360163/l5hnbsoq.png)
 5. Select **Review + create**, then **Create**.
 
 
@@ -295,7 +291,6 @@ The Backup Extension is already installed on the cluster **aks-unprotected--&lt;
 2. Enter the **Policy name** `CaldovaPay-AKS-Policy` and select **Datasource type** as **Kubernetes Services**.
 3. On the **Schedule + retention** tab, set **Backup Frequency** to **Daily** and keep the **Default** retention rule. 
 4. Click on Add retention rule -> Select Retention rule **Backup taken every month**, select **Vault-Standard**, add **30** days retention duration and click on **Add**
-!IMAGE[s4abc64m.png](instructions360163/s4abc64m.png)
 5. Select **Next**, then select **Create** on the **Review + create** tab.
 
 **Configure protection**
@@ -311,8 +306,6 @@ The Backup Extension is already installed on the cluster **aks-unprotected--&lt;
 5. For **Snapshot resource group**, select `Exercise2_UnProtectedWorkloadsSet1`.
 6. Select **Validate**. If validation reports missing roles, select the datasource checkbox and choose **Assign missing roles**.
 7. When validation succeeds, select **Next**, then **Configure backup**.
-
-!IMAGE[wflj56t2.png](instructions360163/wflj56t2.png)
 
 >  🛟 Skip if the configuration is successful. If
  **Protection still can't be configured:** review the pre-protected cluster instead. Go to **Resiliency → Backup and recovery → Protected items**, set the **Datasource type** filter to **Azure Kubernetes services**, and select **aks-protected-&lt;unique-suffix&gt;-3**.
@@ -339,7 +332,6 @@ Cosmos DB vaulted backup is in preview, and `caldovapay-cosmos` is already set u
 3. On the **Backup policy** tab, select **`CaldovaPay-Cosmos-Policy`**, then select **Next**.
 4. On the **Datasources** tab, select the datasource name, choose the Cosmos DB account **cosmos-unprotected-&lt;unique-suffix&gt;-1**, and select **Next**.
    - Validation runs automatically. If it reports **Role assignment not done or missing**, select **Assign missing roles**.
-   !IMAGE[xfpqb2cg.png](instructions360163/xfpqb2cg.png)
 5. When validation shows **Success**, select **Next**, then select **Configure backup** on the **Review + configure** tab.
 
 
@@ -358,14 +350,9 @@ Protection is in place, but which recovery point is safe to restore? Azure Backu
 2. Review the summary tiles across the top, in particular **Resources with suspicious RPs**.
 3. Review the **Scan status** and **Scan summary** columns across your protected items.
 
-!IMAGE[fgobp3cl.png](instructions360163/fgobp3cl.png)
 4. Select the protected item showing **Suspicious RPs found**.
-!IMAGE[othid33w.png](instructions360163/othid33w.png)
 5. Select through to the associated item and review its recovery points. Identify which show a **Recent scan status** of **Suspicious** and which show **No Threats Reported**.
-!IMAGE[e3wkcvwz.png](instructions360163/e3wkcvwz.png)
-!IMAGE[lublworj.png](instructions360163/lublworj.png)
 6. Select a suspicious recovery point to view the scan details, including the Defender for Cloud alerts that caused it to be flagged.
-!IMAGE[m0jokvdp.png](instructions360163/m0jokvdp.png)
 
 > [!Hint] 💡 **Note the timestamp of the last clean recovery point** - the most recent one showing **No Threats Reported** before the suspicious ones begin. You'll restore from it in Task 4.
 
@@ -386,12 +373,10 @@ A real ransomware attack rarely hits just one machine. **Bulk restore** recovers
 2. Go to **Protected items → Backup items**.
 3. On the **Backup items** pane, select **Azure Virtual Machine** as the **BACKUP MANAGEMENT TYPE**.
 4. Select **Bulk restore (Preview)** 
-!IMAGE[29hv90kx.png](instructions360163/29hv90kx.png)
 5. On the **Basics** tab, click on **Select** to select resources, select all the three VMs listed and click **Save**.
 6. On the **Restore point** tab:
    - The latest restore point is selected by default for each VM.
    - For the VM you reviewed in Task 3, select **Edit** and choose the **last clean recovery point** you noted, the most recent one showing **No Threats Reported**.
-   !IMAGE[uh908wpy.png](instructions360163/uh908wpy.png)
 
    > [!IMPORTANT]
    > ⚠️ Restoring the newest recovery point would reintroduce the compromise. Always restore from the last point verified clean.
@@ -407,13 +392,9 @@ A real ransomware attack rarely hits just one machine. **Bulk restore** recovers
    - **Managed Identity**: `Disable`
    - Select **Next**.
 
-  !IMAGE[eqqc0ife.png](instructions360163/eqqc0ife.png)
-
 8. On the **Validation pre-checks** tab, confirm all checks pass.
-!IMAGE[091ehllb.png](instructions360163/091ehllb.png)
 9. On the **Review + restore** tab, select **Restore** to start the bulk restore.
 10. Track progress in the vault under **Monitoring** -> **Backup jobs**. Each VM restore runs as its own job.
-!IMAGE[1lcntwou.png](instructions360163/1lcntwou.png)
 
 > [!TIP]
 > 💡 Restore time grows with the number and size of the VMs. You don't need to wait for the jobs to finish before moving on.
@@ -497,14 +478,16 @@ This pre-deployed application represents a non resilient version of the CaldovaP
 
 In Exercise 1, you reviewed the resiliency posture of Caldova's entire Azure estate. In this task, you will identify the resources that collectively make up a single application.
 
-1. Sign in to the Azure portal using [https://aka.ms/AzureResiliency/regionalpreview](https://aka.ms/AzureResiliency/regionalpreview) using the credentials on the **Resources** tab.
+1. Sign in to the Azure portal using [https://aka.ms/AzureResiliency/regionalpreview](https://aka.ms/AzureResiliency/regionalpreview) with your assigned lab Azure credentials, or your own Azure account outside the hosted lab.
 2. Open **Azure Copilot** from the top bar of the portal.
 3. Select **Resiliency** from the **New chat** options.
 
     You can also open the Resiliency agent from the top actions on the **Resiliency** overview page.
-4. Copy the following prompt into the agent chat and send it:
+4. Copy the following prompt into the agent chat, replace `<subscription-id>` with the ID of the subscription containing **CaldovaPayApp_Ex3_Task1**, and send it. You can find the ID under **Subscriptions → your subscription → Overview → Subscription ID** in the Azure portal.
 
-    +++Discover my application in the scope Sub: @lab.CloudSubscription.Id, RG: CaldovaPayApp_Ex3_Task1. Use the discovery agent present under: app-discovery-ex3task1 for discovery. It already has necessary RBAC on this scope.+++
+    ```text
+    Discover my application in the scope Sub: <subscription-id>, RG: CaldovaPayApp_Ex3_Task1. Use the discovery agent present under: app-discovery-ex3task1 for discovery. It already has necessary RBAC on this scope.
+    ```
 
 
 5. Review the resources discovered, the recommended application boundaries within the specified subscription and resource group.
@@ -540,19 +523,19 @@ A Service Group allows Caldova to represent the resources supporting CaldovaPayA
 1. Continue in the same Resiliency agent conversation used for application discovery.
 2. Ask the agent to create a Service Group from the discovered application resources:
 
-    +++Using the application resources that were discovered, create a Service Group for CaldovaPayApp. Show me the resources that will be included and ask for confirmation before creating it.+++
+    ```text
+    Using the application resources that were discovered, create a Service Group for CaldovaPayApp. Show me the resources that will be included and ask for confirmation before creating it.
+    ```
 
 
 3. Review the resources that the agent proposes adding to the Service Group.
 4. Confirm that only resources belonging to the application discovered in Task 1 are included.
-5. When prompted for the Service Group name, enter:
+5. When prompted for the Service Group name, use the format `CaldovaPayApp_<unique-suffix>`. Replace `<unique-suffix>` with a unique value of your choice, for example `CaldovaPayApp_a7f29c`. Keep the actual name you choose for the remaining tasks.
 
-    +++CaldovaPayApp_@lab.LabInstance.Id+++
-[Or a unique name if you are running this offline]
 6. Confirm the creation of the Service Group. 
 
 > [!IMPORTANT]
-> Service Group names must be unique. Hence your lab user ID is added as the suffix to the Service group name
+> Service Group names must be unique. If your chosen name is already in use, choose a different suffix. In later prompts, replace `<service-group-name>` with the full name you actually created, without angle brackets.
 
 
 ## Option 2: Create the Service Group manually
@@ -563,13 +546,10 @@ Only use this option if Service Group creation through the Resiliency agent is u
 2. In the left menu, expand **Infrastructure Resiliency**.
 3. Select **Service Groups**.
 4. Select **Create Service Group**.
-5. Enter the name: 
+5. Enter a name in the format `CaldovaPayApp_<unique-suffix>`. Replace `<unique-suffix>` with a unique value of your choice, for example `CaldovaPayApp_a7f29c`. Keep the actual name you choose for the remaining tasks.
 
-    +++CaldovaPayApp_@lab.LabInstance.Id+++
-
-[Or a unique name if you are running this offline]
 > [!IMPORTANT]
-> Service Group names must be unique. Hence you need to add the user ID as the suffix to the Service group name
+> Service Group names must be unique. If your chosen name is already in use, choose a different suffix. In later prompts, replace `<service-group-name>` with the full name you actually created, without angle brackets.
 
 6. Select the Tenant Root as the parent 
 7. Click on 'Add Members' and select the resource group **CaldovaPayApp_Ex3_Task1**
@@ -588,9 +568,11 @@ Now that the resources have been grouped as an application, assign a zonal and r
 ## Step 1: Assign the zonal resiliency goal using the Resiliency agent
 
 1. Return to the Resiliency agent.
-2. Copy and send the following prompt:
+2. Copy the following prompt, replace `<service-group-name>` with the full Service Group name you created in Task 2, and send it:
 
-    +++Assign a zonal resiliency goal to the Service Group named CaldovaPayApp_@lab.LabInstance.Id. Show me the proposed goal and ask for confirmation before making the change.+++
+    ```text
+    Assign a zonal resiliency goal to the Service Group named <service-group-name>. Show me the proposed goal and ask for confirmation before making the change.
+    ```
 
 
 3. Review the goal proposed by the agent.
@@ -601,7 +583,7 @@ Now that the resources have been grouped as an application, assign a zonal and r
 1. Search for **Resiliency** in the Azure portal search bar and open the **Resiliency** dashboard.
 2. In the left menu, expand **Infrastructure Resiliency**.
 3. Select **Service Group**.
-4. Locate the Service Group named CaldovaPayApp_Ex3_Task3_SG.
+4. Locate the Service Group you created in Task 2, using its full name.
 5. Review its **Regional Resiliency** goal in *Resiliency Goals* section
 6. Select **Assign regional goal**.
 7. Check the "Track this Service Group against regional resiliency goals" checkbox. 
@@ -623,11 +605,12 @@ Now assess whether the resources supporting CaldovaPayApp collectively meet the 
 ## Run resiliency assessments using the Resiliency agent
 
 1. Return to the Resiliency agent.
-2. Copy and send the following prompt:
+2. Copy the following prompt, replace `<service-group-name>` with the full Service Group name you created in Task 2, and send it:
 
-    +++Show me the resiliency posture for my application CaldovaPayApp_@lab.LabInstance.Id. Show which resources meet the assigned goal, which resources do not meet it, and the recommendations for addressing any gaps.+++
+    ```text
+    Show me the resiliency posture for my application <service-group-name>. Show which resources meet the assigned goal, which resources do not meet it, and the recommendations for addressing any gaps.
+    ```
 
-[Enter your service group name in prompt]
 3. Review the agent response.
 
 4. Identify:
@@ -638,10 +621,11 @@ Now assess whether the resources supporting CaldovaPayApp collectively meet the 
 
 5. Run a Risk assessment for the Caldova Payments application
 
-Copy and send the following prompt:
+Copy the following prompt, replace `<service-group-name>` with the full Service Group name you created in Task 2, and send it:
 
-    +++Run an assessment for CaldovaPayApp_@lab.LabInstance.Id. I want to understand the risks for my application's resiliency.+++
-[Enter your service group name in prompt]
+```text
+Run an assessment for <service-group-name>. I want to understand the risks for my application's resiliency.
+```
 
 6. Review the agent's response. Expand the Assessment report and note:
     1. The Goals status
@@ -738,7 +722,7 @@ Explore recovery plan and drill options in the Resiliency Manager for your servi
 
 2. In the left menu, expand **Infrastructure Resiliency** and select **Service Group**.
 
-3. Open **CaldovaPayApp_@lab.LabInstance.Id** or your service group.  In the left menu, select **Recovery Plans**.
+3. Open the Service Group you created in Exercise 3, using its full name. In the left menu, select **Recovery Plans**.
 
 5. Try creating a recovery plan
 
@@ -748,7 +732,7 @@ Explore recovery plan and drill options in the Resiliency Manager for your servi
     3. Try excluding or including a resource
 
 7. Note, you will not have enough time to run the recovery plan. THis is purely exploratory. 
-    1. You can also ask the agent to create a recovery plan for CaldovaPayApp_@lab.LabInstance.Id
+    1. You can also ask the agent to create a recovery plan for the Service Group you created in Exercise 3. Include its full name in your request.
 
 > [!NOTE]
 > Resources configured with a Highly Available (HA) solution are automatically excluded, because they perform self-managed failover. 
@@ -761,7 +745,7 @@ Explore recovery plan and drill options in the Resiliency Manager for your servi
 
 1. In the left menu under **Infrastructure Resiliency**, select **Drills**.
 
-2. Create a drill for **CaldovaPayApp_@lab.LabInstance.Id** or your service group 
+2. Create a drill for the Service Group you created in Exercise 3, using its full name.
 
 3. Review the drill resources and fault designer:
 
