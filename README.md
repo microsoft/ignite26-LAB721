@@ -1,3 +1,9 @@
+<a name="start-building"></a>
+ 
+<p align="center">
+<img src="img/banner-ignite-26.png" alt="Microsoft Ignite 2026" width="100%"/>
+</p>
+
 # [Microsoft Ignite 2026](https://ignite.microsoft.com)
 
 ## 🔥LAB721: Hands-on with the resiliency in Azure: Assess, recommend, recover
