@@ -3,7 +3,7 @@
 ## 🔥LAB721: Hands-on with the resiliency in Azure: Assess, recommend, recover
 ### Session description
 
-In this hands-on lab, experience Azure resiliency across availability, disaster recovery, data resiliency, and cyber recovery. Define resiliency goals for a sample workload, assess readiness against zonal and regional failures, identify gaps against RTO/RPO targets, and apply guided recommendations to improve resiliency. Perform clean-room recovery to restore trusted data after an attack and leave with a practical, repeatable approach using Azure resiliency capabilities and AI-assisted guidance.
+In this hands-on lab, experience Azure resiliency across availability, data resiliency, and cyber recovery. Define resiliency goals for a sample workload, assess readiness against zonal and regional failures, identify gaps against RTO/RPO targets, and apply guided recommendations to improve resiliency. Configure data protection using Azure Backup on a variety of workloads and then perform clean-room recovery to restore trusted data after an attack and leave with a practical, repeatable approach using Azure resiliency capabilities and AI-assisted guidance.
 
 ### 🚀 Getting started
 
@@ -11,9 +11,12 @@ In this hands-on lab, experience Azure resiliency across availability, disaster 
 
 If you're following along during a live session:
 
-1. Step 1
-2. Step 2
-3. Open [`instructions/`](instructions/README.md) when this session includes
+You will simulate the journey of Caldova, a financial services firm, launching its payments application, **CaldovaPayApp**, on Azure with a focus on:
+
+- Infrastructure Resiliency
+- Data Resiliency
+- Cyber Recovery
+- Open [`instructions/`](instructions/README.md) when this session includes
    attendee step-by-step guidance
 
 #### On your own
@@ -29,16 +32,73 @@ If you're learning at your own pace:
 
 By the end of this session, you will be able to:
 
-- Outcome 1
-- Outcome 2
-- Outcome 3
+- Goal 1: Learn how simple it is to configure IaC templates with resiliency built-in
+- Goal 2: Understand how to configure backup and run a recovery after a cyber threat 
+- Goal 3: Easily discovery app resources and assess your application’s resiliency posture 
+
+## Story Overview
+
+Caldova is launching **CaldovaPayApp** to support its expansion into a new market. With customer transactions expected to surge during the holiday season, Caldova must build resiliency into the application from day one rather than retrofit it later. The growing transaction volume also makes Caldova a more attractive target for cyber threats. You are the Platform Architect for Caldova and you will take key decisions to ensure Caldova is prepared for the upcoming challenge.
+
+
+### By the end of this lab, Caldova will:
+
+- 🏗️ Have deployed CaldovaPayApp from an IaC template with zonal resiliency built in from the start.
+- ✅ Have its cloud-native workloads backed up in a vault hardened against ransomware.
+- 🛡️ Be able to identify compromised recovery points and recover virtual machines in bulk from verified clean snapshots.
+- 🌐 Have its application resources grouped and assessed against zonal resiliency goals.
+- 🔁 Have a recovery plan in place to orchestrate recovery.
+
 
 ### 💻 Technologies used
 
-- Technology 1
-- Technology 2
-- Technology 3
+- [Resiliency Agent](https://learn.microsoft.com/en-us/azure/resiliency/goals-recommendations-use-agent)
+- [Azure Backup](https://learn.microsoft.com/en-us/azure/backup/backup-overview)
+- [Cyber Recovery in Azure Backup](https://learn.microsoft.com/en-us/azure/backup/security-overview) 
+- [Infrastructure Resiliency Manager ](https://learn.microsoft.com/en-us/azure/resiliency/infrastructure-resiliency-manager-overview)
 
+### 👥 Content owners
+
+<!-- TODO: Add yourself as a content owner
+1. Change the src in the image tag to {your github url}.png
+2. Change INSERT NAME HERE to your name
+3. Change the github url in the final href to your url. -->
+
+<table>
+<tr>
+    <td align="center"><a href="http://github.com/sagarkeswani">
+        <img src="https://github.com/sagarkeswani.png" width="100px;" alt="Sagar Keswani"/><br />
+        <sub><b>Sagar Keswani</b></sub></a><br />
+        <a href="https://github.com/sagarkeswani" title="talk">📢</a>
+    </td>
+    <td align="center"><a href="http://github.com/tbhavya">
+        <img src="https://github.com/tbhavya.png" width="100px;" alt="Bhavya Tadikonda"/><br />
+        <sub><b>Bhavya Tadikonda</b></sub></a><br />
+        <a href="https://github.com/tbhavya" title="talk">📢</a>
+    </td>
+    <td align="center"><a href="http://github.com/viveksheelsingh">
+        <img src="https://github.com/viveksheelsingh.png" width="100px;" alt="Vivek Sheel Singh"/><br />
+        <sub><b>Vivek Sheel Singh</b></sub></a><br />
+        <a href="https://github.com/viveksheelsingh" title="talk">Lab Developer and Proctor</a>
+    </td>
+    <td align="center"><a href="http://github.com/divyajain19">
+        <img src="https://github.com/divyajain19.png" width="100px;" alt="Divya Jain"/><br />
+        <sub><b>Divya Jain</b></sub></a><br />
+        <a href="https://github.com/divyajain19" title="talk">Lab Developer and Proctor</a>
+    </td>
+    <td align="center"><a href="http://github.com/Charmila1">
+        <img src="https://github.com/Charmila1.png" width="100px;" alt="Charmila Rekha Somala"/><br />
+        <sub><b>Charmila Rekha Somala</b></sub></a><br />
+        <a href="https://github.com/Charmila1" title="talk">Proctor</a>
+    </td>
+    <td align="center"><a href="http://github.com">
+        <img src="https://github.com/yourgithublink.png" width="100px;" alt="Venkatesh Sargunesan"/><br />
+        <sub><b>Venkatesh Sargunesan</b></sub></a><br />
+        <a href="https://github.com/Charmila1" title="talk">Proctor</a>
+    </td>
+   
+</tr>
+</table>
 ### 📚 Continue your learning
 
 Pick your next step based on your learning style:
@@ -66,23 +126,6 @@ copilot plugin install microsoftdocs/mcp
 [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_Microsoft_Learn_MCP-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://vscode.dev/redirect/mcp/install?name=microsoft-learn&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Flearn.microsoft.com%2Fapi%2Fmcp%22%7D)
 
 For more information, visit the [Learn MCP Server repo](https://aka.ms/learnmcp).
-
-### 👥 Content owners
-
-<!-- TODO: Add yourself as a content owner
-1. Change the src in the image tag to {your github url}.png
-2. Change INSERT NAME HERE to your name
-3. Change the github url in the final href to your url. -->
-
-<table>
-<tr>
-    <td align="center"><a href="http://github.com/yourGitHubHandle">
-        <img src="https://github.com/yourGitHubHandle.png" width="100px;" alt="INSERT NAME HERE"/><br />
-        <sub><b>INSERT NAME HERE</b></sub></a><br />
-            <a href="https://github.com/yourGitHubHandle" title="talk">📢</a>
-    </td>
-</tr></table>
-
 ### ⚖️ Trademarks
 
 This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft trademarks or logos is subject to and must follow [Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks/usage/general). Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
