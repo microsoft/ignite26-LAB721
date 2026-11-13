@@ -22,8 +22,8 @@ You will simulate the journey of Caldova, a financial services firm, launching i
 - Infrastructure Resiliency
 - Data Resiliency
 - Cyber Recovery
-- Open [`instructions/`](instructions/README.md) when this session includes
-   attendee step-by-step guidance
+  
+- See [`instructions/`](instructions/README.md) for the step by step guidance for the lab.
 
 #### On your own
 
@@ -105,6 +105,7 @@ Caldova is launching **CaldovaPayApp** to support its expansion into a new marke
    
 </tr>
 </table>
+
 ### 📚 Continue your learning
 
 Pick your next step based on your learning style:
