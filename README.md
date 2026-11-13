@@ -95,12 +95,12 @@ Caldova is launching **CaldovaPayApp** to support its expansion into a new marke
     <td align="center"><a href="http://github.com/Charmila1">
         <img src="https://github.com/Charmila1.png" width="100px;" alt="Charmila Rekha Somala"/><br />
         <sub><b>Charmila Rekha Somala</b></sub></a><br />
-        <a href="https://github.com/Charmila1" title="talk">Proctor</a>
+        <a href="https://github.com/Charmila1" title="talk">Lab Developer and Proctor</a>
     </td>
     <td align="center"><a href="http://github.com">
         <img src="https://github.com/yourgithublink.png" width="100px;" alt="Venkatesh Sargunesan"/><br />
         <sub><b>Venkatesh Sargunesan</b></sub></a><br />
-        <a href="https://github.com/Charmila1" title="talk">Proctor</a>
+        <a href="https://github.com/Charmila1" title="talk">Lab Developer and Proctor</a>
     </td>
    
 </tr>
