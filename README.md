@@ -74,37 +74,37 @@ Caldova is launching **CaldovaPayApp** to support its expansion into a new marke
 <tr>
     <td align="center"><a href="http://github.com/sagarkeswani">
         <img src="https://github.com/sagarkeswani.png" width="100px;" alt="Sagar Keswani"/><br />
-        <sub><b>Sagar Keswani</b></sub></a><br />
+        <b>Sagar Keswani</b></a><br />
         <a href="https://github.com/sagarkeswani" title="talk">📢</a>
     </td>
     <td align="center"><a href="http://github.com/tbhavya">
         <img src="https://github.com/tbhavya.png" width="100px;" alt="Bhavya Tadikonda"/><br />
-        <sub><b>Bhavya Tadikonda</b></sub></a><br />
+        <b>Bhavya Tadikonda</b></a><br />
         <a href="https://github.com/tbhavya" title="talk">📢</a>
     </td>
     <td align="center"><a href="http://github.com/viveksheelsingh">
         <img src="https://github.com/viveksheelsingh.png" width="100px;" alt="Vivek Sheel Singh"/><br />
-        <sub><b>Vivek Sheel Singh</b></sub></a><br />
+        <b>Vivek Sheel Singh</b></a><br />
         <a href="https://github.com/viveksheelsingh" title="talk">Lab Developer and Proctor</a>
     </td>
     <td align="center"><a href="http://github.com/divyajain19">
         <img src="https://github.com/divyajain19.png" width="100px;" alt="Divya Jain"/><br />
-        <sub><b>Divya Jain</b></sub></a><br />
+        <b>Divya Jain</b></a><br />
         <a href="https://github.com/divyajain19" title="talk">Lab Developer and Proctor</a>
     </td>
     <td align="center"><a href="http://github.com/Charmila1">
         <img src="https://github.com/Charmila1.png" width="100px;" alt="Charmila Rekha Somala"/><br />
-        <sub><b>Charmila Rekha Somala</b></sub></a><br />
+        <b>Charmila Rekha Somala</b></a><br />
         <a href="https://github.com/Charmila1" title="talk">Lab Developer and Proctor</a>
     </td>
     <td align="center"><a href="http://github.com">
         <img src="https://github.com/yourgithublink.png" width="100px;" alt="Venkatesh Sargunesan"/><br />
-        <sub><b>Venkatesh Sargunesan</b></sub></a><br />
+        <b>Venkatesh Sargunesan</b></a><br />
         <a href="https://github.com/Charmila1" title="talk">Azure Resiliency Expert</a>
     </td>
     <td align="center"><a href="http://github.com/suryasraju">
         <img src="https://github.com/suryasraju.png" width="100px;" alt="Surya Sripathi Raju"/><br />
-        <sub><b>Surya Sripathi Raju</b></sub></a><br />
+        <b>Surya Sripathi Raju</b></a><br />
         <a href="https://github.com/suryasraju" title="talk">Azure Resiliency Expert</a>
     </td>   
 </tr>
