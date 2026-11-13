@@ -23,7 +23,7 @@ You will simulate the journey of Caldova, a financial services firm, launching i
 - Data Resiliency
 - Cyber Recovery
   
-- See [`instructions/`](instructions/README.md) for the step by step guidance for the lab.
+See [`instructions/`](instructions/README.md) for the step by step guidance for the lab.
 
 #### On your own
 
@@ -100,9 +100,13 @@ Caldova is launching **CaldovaPayApp** to support its expansion into a new marke
     <td align="center"><a href="http://github.com">
         <img src="https://github.com/yourgithublink.png" width="100px;" alt="Venkatesh Sargunesan"/><br />
         <sub><b>Venkatesh Sargunesan</b></sub></a><br />
-        <a href="https://github.com/Charmila1" title="talk">Lab Developer and Proctor</a>
+        <a href="https://github.com/Charmila1" title="talk">Azure Resiliency Expert</a>
     </td>
-   
+    <td align="center"><a href="http://github.com/suryasraju">
+        <img src="https://github.com/suryasraju.png" width="100px;" alt="Surya Sripathi Raju"/><br />
+        <sub><b>Surya Sripathi Raju</b></sub></a><br />
+        <a href="https://github.com/suryasraju" title="talk">Azure Resiliency Expert</a>
+    </td>   
 </tr>
 </table>
 
