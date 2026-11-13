@@ -1,10 +1,5 @@
-# Docs
+# Images referred in the lab
 
 <!-- IGNITE TEMPLATE PLACEHOLDER: remove this folder when the session needs no additional documentation. -->
 
-Use this folder for supporting documentation such as reference material and
-architecture/context.
-
-If this repository intentionally uses MkDocs or another docs-site pattern,
-attendee instructions can remain here. Link the attendee entry point clearly
-from the root README.
+The images in this folder are the architecture diagrams for the CaldovaPay App used in the lab for the different Infrastructure Resiliency demos
