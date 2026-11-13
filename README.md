@@ -97,16 +97,17 @@ Caldova is launching **CaldovaPayApp** to support its expansion into a new marke
         <b>Charmila Rekha Somala</b></a><br />
         <a href="https://github.com/Charmila1" title="talk">Lab Developer and Proctor</a>
     </td>
-    <td align="center"><a href="http://github.com">
-        <img src="https://github.com/yourgithublink.png" width="100px;" alt="Venkatesh Sargunesan"/><br />
-        <b>Venkatesh Sargunesan</b></a><br />
-        <a href="https://github.com/Charmila1" title="talk">Azure Resiliency Expert</a>
-    </td>
     <td align="center"><a href="http://github.com/suryasraju">
         <img src="https://github.com/suryasraju.png" width="100px;" alt="Surya Sripathi Raju"/><br />
         <b>Surya Sripathi Raju</b></a><br />
         <a href="https://github.com/suryasraju" title="talk">Azure Resiliency Expert</a>
-    </td>   
+    </td>
+    <td align="center"><a>
+        <b>- Venkatesh Sargunesan</b><br />
+        <b>- Kirushna Kumar Ganesan</b></a><br />
+        <a>Azure Resiliency Experts</a>
+    </td>
+
 </tr>
 </table>
 
