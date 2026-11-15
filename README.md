@@ -102,6 +102,11 @@ Caldova is launching **CaldovaPayApp** to support its expansion into a new marke
         <b>Surya Sripathi Raju</b></a><br />
         <a href="https://github.com/suryasraju" title="talk">Azure Resiliency Expert</a>
     </td>
+     <td align="center"><a href="http://github.com/venkatesh-sarg">
+        <img src="https://github.com/venkatesh-sarg.png" width="100px;" alt="Venkatesh Sargunesan"/><br />
+        <b>Venkatesh Sargunesan</b></a><br />
+        <a href="https://github.com/venkatesh-sarg" title="talk">Azure Resiliency Expert</a>
+    </td>
 </tr>
 </table>
 
